@@ -33,7 +33,9 @@ function App() {
       <ul>
         {todoList.map(response => {
           return (
-          <li key={response.id}>{response.title}</li>
+            <li key={response.id}>
+              {response.title}
+            </li>
           );
         })}
       </ul>
