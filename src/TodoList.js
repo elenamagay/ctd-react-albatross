@@ -27,12 +27,10 @@ const todoList = [
 const TodoList = () => {
     return (
         <ul>
-        {todoList.map((todo) => (
-            // <li >
-                <TodoListItem key={todo.id} title={todo.title} />
-            // </li>
-        ))}
-      </ul>
+            {todoList.map((todo, index) => (
+                <TodoListItem key={index} title={todo.title} />
+            ))}
+        </ul>
     );
 };
 
