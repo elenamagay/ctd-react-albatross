@@ -1,11 +1,16 @@
 import React from "react";
 
 const AddTodoForm = (props) => {
+    
+    const [todoTitle, setTodoTitle] = React.useState('');
+
+    const handleTitleChange = (event) => {
+        let newTodoTitle = event.target.value;
+        setTodoTitle(newTodoTitle);
+    };
 
     const handleAddTodo = (event) => {
-        event.preventDefault();
-        let todoTitle = event.target.title.value;
-        console.log(todoTitle);
+        event.preventDefault();        
         props.onAddTodo(todoTitle);
         
         //always do this last
@@ -17,7 +22,9 @@ const AddTodoForm = (props) => {
             <label htmlFor="todoTitle">Title</label>
             <input 
                 id="todoTitle" 
-                name="title"                
+                name="title"
+                value={todoTitle}
+                onChange={handleTitleChange}           
             />
             <button type="submit">Add</button>
         </form>
