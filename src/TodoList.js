@@ -24,10 +24,10 @@ const todoList = [
     },
   ];  
   
-const TodoList = () => {
+const TodoList = (props) => {
     return (
         <ul>
-            {todoList.map((todo, index) => (
+            {props.todoList.map((todo, index) => (
                 <TodoListItem key={index} title={todo.title} />
             ))}
         </ul>

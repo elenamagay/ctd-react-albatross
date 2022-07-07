@@ -17,8 +17,8 @@ const AddTodoForm = (props) => {
             <label htmlFor="todoTitle">Title</label>
             <input 
                 id="todoTitle" 
-                name="title">                
-            </input>
+                name="title"                
+            />
             <button type="submit">Add</button>
         </form>
     );
