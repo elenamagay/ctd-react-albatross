@@ -24,11 +24,11 @@ const todoList = [
     },
   ];  
   
-const TodoList = () => {
+const TodoList = ({ todoList }) => {
     return (
         <ul>
-            {todoList.map((todo, index) => (
-                <TodoListItem key={index} title={todo.title} />
+            {todoList.map((todo) => (
+                <TodoListItem key={todo.id} todo={todo} />
             ))}
         </ul>
     );
