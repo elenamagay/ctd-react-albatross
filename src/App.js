@@ -5,16 +5,21 @@ import AddTodoForm from './AddTodoForm';
 const App = () => {
   const [todoList, setTodoList] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
+  const url_API = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE_ID}/Default`
 
   React.useEffect(()=> {
-    new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve({data: {todoList: JSON.parse(localStorage.getItem('savedTodoList'))}})
-      }, 2000);
+    fetch(url_API,
+      {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`
+        }
+      })
+    .then((res) => res.json())
+    .then((result) => {
+      setTodoList(result.records);
+      setIsLoading(false)        
     })
-      .then (result => 
-        {setTodoList(result.data.todoList)})
-      .then (() => {setIsLoading(false)})
 
   }, []);
 
