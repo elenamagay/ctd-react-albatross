@@ -13,8 +13,8 @@ const AddTodoForm = ({ onAddTodo }) => {
     const handleAddTodo = (event) => {
         event.preventDefault();        
         onAddTodo({
-            title: todoTitle,
-            id: Date.now()
+            fields: {Title: todoTitle}
+            // id: Date.now()
         });
         
         //always do this last
