@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./InputWithLabel.module.css";
 
 const InputWithLabel = (props) => {
     const inputRef = React.useRef();
@@ -8,10 +9,12 @@ const InputWithLabel = (props) => {
             inputRef.current.focus();
         }
     }, [])
+
     return (
         <>
             <label htmlFor="todoTitle">{props.children}</label>
                 <input 
+                    className={styles.input}
                     id="todoTitle" 
                     name="title"
                     value={props.todoTitle}
