@@ -1,0 +1,22 @@
+.headline {
+    font-size: xx-large;
+    color: brown;
+    text-align: center;
+}
+
+.container {
+    
+    background-color: lightsalmon;
+    height: 100%;
+    width: 50%;
+    opacity: 80%;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 10px;
+}
+
+body {
+    background: url('../src/pictures/fall.jpg');
+    width: 100%;
+    background-position: center;
+}
