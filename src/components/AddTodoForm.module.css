@@ -3,9 +3,11 @@
 }
 
 .addBtn {
+    color: white;
     border-radius: 5px;
     background-color: rgb(52, 102, 147);
     border: 0;
+    padding: 4px
 }
 .addBtn:hover {
     background-color: rgb(116, 153, 186);
