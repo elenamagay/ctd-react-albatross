@@ -1,0 +1,19 @@
+.item {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 3px;
+    margin: 5px;
+    color: rgb(0, 64, 51);
+}
+
+.removeBtn {
+    color: whitesmoke;
+    border-radius: 5px;
+    background-color: rgb(52, 102, 147);
+    border: 0;
+    padding: 4px;
+}
+.removeBtn:hover {
+    background-color: rgb(116, 153, 186);
+    opacity: 0.9;
+    color: black
+}
