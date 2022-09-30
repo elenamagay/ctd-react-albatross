@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./InputWithLabel.module.css";
+import PropTypes from "prop-types";
 
 const InputWithLabel = (props) => {
     const inputRef = React.useRef();
@@ -25,4 +26,5 @@ const InputWithLabel = (props) => {
     );
 };
 
+InputWithLabel.propTypes = {props: PropTypes.func}
 export default InputWithLabel;

@@ -11,4 +11,6 @@
 }
 .addBtn:hover {
     background-color: rgb(116, 153, 186);
+    opacity: 0.9;
+    color: black
 }
