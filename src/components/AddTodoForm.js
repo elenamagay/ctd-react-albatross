@@ -8,29 +8,29 @@ const AddTodoForm = ({ onAddTodo }) => {
     const [todoTitle, setTodoTitle] = React.useState('');
 
     const handleTitleChange = (event) => {
-        const newTodoTitle = event.target.value;
-        setTodoTitle(newTodoTitle);
+        const newTodo = event.target.value;
+        setTodoTitle(newTodo);
     };
 
     const handleAddTodo = (event) => {
         event.preventDefault();        
         onAddTodo({
             fields: {Title: todoTitle}
-            // id: Date.now()
         });
         
         //always do this last
-        setTodoTitle("");
+        setTodoTitle('');
     };
     
     return (
         <form className={styles.addForm} onSubmit={handleAddTodo}>
             <InputWithLabel 
-            todoTitle={todoTitle}
-            handleTitleChange={handleTitleChange}
-            >
-                Title
-            </InputWithLabel>
+            id="todoTitle"
+            name= "title"
+            isFocused="true"
+            value={todoTitle}
+            onChange={handleTitleChange}
+            ></InputWithLabel>
             <button className={styles.addBtn} type="submit">Add</button>
         </form>
     );

@@ -14,15 +14,16 @@ const App = () => {
       {
         method: 'GET',
         headers: {
-          Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`
-        }
-      })
+          'Authorization': `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`,          
+      }
+    })
     .then((res) => res.json())
     .then((result) => {
       setTodoList(result.records);
       setIsLoading(false)        
     })
-
+    .catch((error) => 
+    console.error(error))
   }, []);
 
   React.useEffect(() => {
@@ -31,14 +32,43 @@ const App = () => {
     }    
   }, [todoList]);
   
-  const addTodo = newTodo => {
-    setTodoList([...todoList, newTodo]);
-  };
+  const addTodo = (newTodo) => {  
+    fetch(url_API,{
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`,
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(newTodo),
+      }
+    )
+      .then((res) => res.json())
+      .then((result) => {
+        setTodoList([...todoList, result]);
+      })
+      .catch((error) => {
+        console.error ("Error has occured:", error);
+        return error;
+      });
+  };  
 
   const removeTodo = id => {
-    const newTodoList = todoList.filter(listItem => id !== listItem.id);
-
-    setTodoList(newTodoList);
+    fetch(`https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE_ID}/Default?records[]=${id}`,{
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`,
+        "Content-type": "application/json",
+      },      
+    })
+    .then((res) => res.json())
+      .then(() => {
+        const newTodoList = todoList.filter(listItem => id !== listItem.id);
+        setTodoList(newTodoList);
+      })
+      .catch((error) => {
+        console.error ("Error has occured:", error);
+        return error;
+      });
   };
 
   return (
@@ -53,7 +83,9 @@ const App = () => {
               {isLoading ? (
                 <p>Loading...</p>
               ) : (
-                <TodoList todoList={todoList} onRemoveTodo={removeTodo} />
+                <TodoList 
+                todoList={todoList} 
+                onRemoveTodo={removeTodo} />
               )}
             </div>
           }
