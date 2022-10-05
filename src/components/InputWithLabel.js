@@ -2,7 +2,15 @@ import React from "react";
 import styles from "./InputWithLabel.module.css";
 import PropTypes from "prop-types";
 
-const InputWithLabel = (props) => {
+const InputWithLabel = ({
+    id, 
+    name, 
+    value, 
+    children, 
+    onChange, 
+    type='text'
+    }) => {
+
     const inputRef = React.useRef();
 
     React.useEffect(() => {
@@ -13,18 +21,29 @@ const InputWithLabel = (props) => {
 
     return (
         <>
-            <label htmlFor="todoTitle">{props.children}</label>
-                <input 
-                    className={styles.input}
-                    id="todoTitle" 
-                    name="title"
-                    value={props.todoTitle}
-                    ref={inputRef}
-                    onChange={props.handleTitleChange}           
-                />
+            <label htmlFor={id}>
+                {children}
+            </label>
+            <input 
+                className={styles.input}
+                id={id} 
+                name={name}
+                value={value}
+                ref={inputRef}
+                onChange={onChange}
+                type={type}
+            />
         </>
     );
 };
 
-InputWithLabel.propTypes = {props: PropTypes.func}
+InputWithLabel.propTypes = {
+    id: PropTypes.string,
+    name: PropTypes.string,
+    value: PropTypes.string, 
+    children: PropTypes.string, 
+    onChange:PropTypes.func, 
+    type:PropTypes.string
+}
+
 export default InputWithLabel;
