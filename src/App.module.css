@@ -1,18 +1,39 @@
 .headline {
     font-size: xx-large;
-    color: brown;
+    color: #9A4309;
     text-align: center;
 }
 
-.container {
-    
+.container {    
     background-color: #FEC1A9;
     height: 100%;
     width: 50%;
+    height: 50%;
     opacity: 80%;
     border-radius: 8px;
-    padding: 5px;
-    margin: 10px;
+    box-shadow: 
+        5px 5px 5px #511903,
+        -1px -1px 3px #511903,
+        2px 2px 1px black;
+    padding: 7px;
+    margin-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    animation-duration: 3s;
+    animation-name: newList-animation;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+@keyframes newList-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 0.8;
+        transform: translateY(0);
+    }
 }
 
 body {

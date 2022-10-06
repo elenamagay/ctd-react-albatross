@@ -2,18 +2,22 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 3px;
     margin: 5px;
-    color: rgb(0, 64, 51);
+    color: #034732;
 }
 
 .removeBtn {
-    color: whitesmoke;
+    color: #C1DBB3;
     border-radius: 5px;
-    background-color: rgb(52, 102, 147);
+    background-color: #008148;
     border: 0;
+    box-shadow: 3px 3px 5px #446930;
     padding: 4px;
+    margin-left: 1%;
+    border: 1px solid;
 }
 .removeBtn:hover {
-    background-color: rgb(116, 153, 186);
+    background-color: #005931;
     opacity: 0.9;
-    color: black
+    color: #C1DBB3;
+    box-shadow: 1px 1px 1px #446930;
 }
