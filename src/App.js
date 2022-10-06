@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './components/Header';
 import TodoList from './components/TodoList';
 import AddTodoForm from './components/AddTodoForm';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -83,12 +84,13 @@ const App = () => {
 
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route
-          exact path="/"
+          path="/new"
           element={
             <div className={styles.container}>
-              <h1 className={styles.headline}>Todo List</h1>
+              <h1 className={styles.headline}>New Todo List</h1>
               <AddTodoForm onAddTodo={addTodo} />
               {isLoading ? (
                 <p>Loading...</p>
@@ -101,9 +103,9 @@ const App = () => {
           }
         ></Route>
         <Route 
-        path='/new'
+        exact path='/'
         element={
-          <h1>New Todo List</h1>
+          <h1>About</h1>
         }
         ></Route>
       </Routes>
