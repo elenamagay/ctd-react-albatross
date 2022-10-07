@@ -1,7 +1,12 @@
+@import url('https://fonts.google.com/css2?family=Marck+Script&family=Tangerine');
+
 .headline {
-    font-size: xx-large;
+    font-family: 'Tangerine',cursive;
+    font-size: 250%;
+    font-weight: bolder;
     color: #9A4309;
     text-align: center;
+    margin-bottom: 10%;
 }
 
 .container {    
@@ -15,11 +20,13 @@
         5px 5px 5px #511903,
         -1px -1px 3px #511903,
         2px 2px 1px black;
-    padding: 7px;
-    margin-top: 15%;
+    padding: 3%;
+    padding-top: 1%;
+    padding-bottom: 4%;
+    margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-name: newList-animation;
     animation-iteration-count: 1;
     animation-direction: normal;
@@ -39,5 +46,25 @@
 body {
     background: url('../src/pictures/fall.jpg');
     width: 100%;
+    height: 100%;
     background-position: center;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (min-width: 769px) {
+    .container {
+        width: 40%;
+    }
+}
+/* On screens that are 768px or less, set the background color to blue */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 50%;
+    }
+}
+/* On screens that are 425px or less, set the background color to blue */
+@media screen and (max-width: 425px) {
+    .container {
+        width: 80%;
+    }
 }
