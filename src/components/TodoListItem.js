@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./TodoListItem.module.css";
 import PropTypes from "prop-types";
-
+import { RiDeleteBin6Line } from 'react-icons/ri';
 const TodoListItem = ({ todo, onRemoveTodo }) => {
     return (
       <>
@@ -12,7 +12,7 @@ const TodoListItem = ({ todo, onRemoveTodo }) => {
             type="button"
             onClick={() => onRemoveTodo(todo.id)}
           >
-            Remove
+            {<RiDeleteBin6Line />}
           </button>
         </li>
       </>

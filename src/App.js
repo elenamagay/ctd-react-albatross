@@ -1,4 +1,5 @@
 import React from 'react';
+import About from './components/About';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import TodoList from './components/TodoList';
@@ -104,10 +105,16 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div>      
     <BrowserRouter>
       <Header />
       <Routes>
+      <Route 
+        exact path='/'
+        element={
+          <About />
+        }
+        ></Route>
         <Route
           path="/new"
           element={
@@ -125,13 +132,7 @@ const App = () => {
               )}
             </div>
           }
-        ></Route>
-        <Route 
-        exact path='/'
-        element={
-          <h1>About</h1>
-        }
-        ></Route>
+        ></Route>        
       </Routes>      
     </BrowserRouter>
     <Footer />

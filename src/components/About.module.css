@@ -1,0 +1,35 @@
+.containerAbout {
+    background-color: #FEC1A9;
+    width: 50%;
+    height: 50%;
+    opacity: 80%;
+    border-radius: 8px;
+    box-shadow: 
+        5px 5px 5px #511903,
+        -1px -1px 3px #511903,
+        2px 2px 1px black;
+    padding: 3%;
+    padding-bottom: 4%;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    animation-duration: 2s;
+    animation-name: About-animation;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+@keyframes About-animation {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 0.8;
+        transform: translateX(0);
+    }
+}
+
+.headerAbout {
+    text-align: center;
+}
