@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import TodoList from './components/TodoList';
 import AddTodoForm from './components/AddTodoForm';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -83,6 +84,7 @@ const App = () => {
   };
 
   return (
+    <div>
     <BrowserRouter>
       <Header />
       <Routes>
@@ -108,8 +110,10 @@ const App = () => {
           <h1>About</h1>
         }
         ></Route>
-      </Routes>
+      </Routes>      
     </BrowserRouter>
+    <Footer />
+    </div>
   );
 }
 
