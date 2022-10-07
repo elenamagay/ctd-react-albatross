@@ -1,10 +1,14 @@
-@import url('https://fonts.google.com/css2?family=Marck+Script&family=Tangerine');
+/* @import url('https://fonts.google.com/css2?family=Marck+Script&family=Tangerine'); */
 
 .headline {
-    font-family: 'Tangerine',cursive;
+    /* font-family: 'Tangerine',cursive; */
     font-size: 250%;
     font-weight: bolder;
     color: #9A4309;
+    text-shadow: 
+    1px 1px 1px #572503,
+    -1px -1px 1px #572503
+    ;
     text-align: center;
     margin-bottom: 10%;
 }

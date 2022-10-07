@@ -1,4 +1,4 @@
-@import url('https://fonts.google.com/css2?family=Indie+Flower?sort=popularity&preview.size=32&preview.layout=row&preview.text=To-Do%20List&preview.text_type=custom');
+/* @import url('https://fonts.google.com/css2?family=Indie+Flower?sort=popularity&preview.size=32&preview.layout=row&preview.text=To-Do%20List&preview.text_type=custom'); */
 
 .navbar {
     background-color: #f2e1da;
@@ -14,9 +14,10 @@
 }
 
 .header {
-    font-family: 'Indie Flower', cursive;
-    color: #034732;
-    font-size: xx-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-family: 'Indie Flower', cursive; */
+    color: #9A4309;
+    font-size: 300%;
     font-weight: bolder;
     margin: 15px;
     
@@ -24,10 +25,11 @@
 
 .homeLink, 
 .newLink {
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-family: 'Indie Flower', cursive; */
     font-weight: bold;
     float: right;
-    padding-top: 1%;
+    padding-top: 2%;
     margin-right: 25px;
 }
 
