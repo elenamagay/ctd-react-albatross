@@ -6,14 +6,12 @@ import PropTypes from "prop-types";
 const TodoList = ({ todoList, onRemoveTodo, sortByTitle, sortAZ }) => {
     return (
       <div className={styles.wrapper}>
-        <div className={styles.sortLayout}>
-          {(todoList.length > 0) &&
-          <button
-            className={styles.sortBtn}
-            type="button"
-            onClick={()=>sortAZ(sortByTitle)}>
-              Sort by
-          </button>}
+        <div className={styles.dropdown}>
+          <span>Sort by</span>
+          <select className='dropdownContent'>
+            <option value='A-Z'>A-Z</option>
+            <option value='Z-A'>Z-A</option>
+          </select>
         </div>
         <div className={styles.todoLayout}>
         <ul className={styles.todoList}>

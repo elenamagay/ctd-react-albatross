@@ -25,3 +25,8 @@
     grid-column: auto;
     grid-row: 2;
 }
+
+.dropdown {
+    margin-top: 4%;
+    margin-bottom: 0;
+}
