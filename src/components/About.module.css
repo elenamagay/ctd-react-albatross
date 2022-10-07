@@ -1,3 +1,5 @@
+@import url('https://fonts.google.com/css2?family=Marck+Script&family=Tangerine');
+
 .containerAbout {
     background-color: #FEC1A9;
     width: 50%;
@@ -31,5 +33,11 @@
 }
 
 .headerAbout {
-    text-align: center;
+    font-family: 'Tangerine',cursive;
+    text-align: center;    
+}
+
+.textAbout {
+    font-family: 'Marck Script',cursive;
+    font-size: 130%;
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.google.com/css2?family=Indie+Flower?sort=popularity&preview.size=32&preview.layout=row&preview.text=To-Do%20List&preview.text_type=custom');
+
 .navbar {
     background-color: #f2e1da;
     opacity: 0.3;
@@ -12,15 +14,18 @@
 }
 
 .header {
+    font-family: 'Indie Flower', cursive;
     color: #034732;
     font-size: xx-large;
     font-weight: bolder;
     margin: 15px;
+    
 }
 
-.homeLink, .newLink {
-    /* display: flex; */
-    /* justify-content: end; */
+.homeLink, 
+.newLink {
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
     float: right;
     padding-top: 1%;
     margin-right: 25px;
@@ -28,7 +33,9 @@
 
 /* On screens that are 425px or less, set the background color to blue */
 @media screen and (max-width: 425px) {
-    .homeLink, .newLink {
+    .homeLink, 
+    .newLink {
+        font-weight: bolder;
         margin: 0;
         margin-left: 5px;
         padding-top: 4%;

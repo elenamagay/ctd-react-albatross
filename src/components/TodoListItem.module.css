@@ -1,5 +1,7 @@
+@import url('https://fonts.google.com/css2?family=Marck+Script');
+
 .item {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Marck Script', cursive;
     padding: 3px;
     padding-left: 3px;
     margin: 12px;

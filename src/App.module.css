@@ -1,8 +1,12 @@
+@import url('https://fonts.google.com/css2?family=Marck+Script&family=Tangerine');
+
 .headline {
-    font-size: xx-large;
+    font-family: 'Tangerine',cursive;
+    font-size: 250%;
     font-weight: bolder;
     color: #9A4309;
     text-align: center;
+    margin-bottom: 10%;
 }
 
 .container {    
@@ -17,6 +21,7 @@
         -1px -1px 3px #511903,
         2px 2px 1px black;
     padding: 3%;
+    padding-top: 1%;
     padding-bottom: 4%;
     margin-top: 5%;
     margin-left: auto;
