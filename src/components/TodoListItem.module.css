@@ -1,23 +1,30 @@
 .item {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 3px;
-    margin: 5px;
+    padding-left: 3px;
+    margin: 12px;
+    margin-left: 3px;
+    margin-right: 3%;
     color: #034732;
+    border-style: none none ridge none;
 }
 
 .removeBtn {
     color: #C1DBB3;
     border-radius: 5px;
-    background-color: #008148;
+    background-color: #9A4309;
+    
     border: 0;
-    box-shadow: 3px 3px 5px #446930;
+    box-shadow: 3px 3px 5px #6b3009;
     padding: 4px;
     margin-left: 1%;
     border: 1px solid;
+    float: right;
 }
 .removeBtn:hover {
-    background-color: #005931;
+    
+    background-color: #6b3009;
     opacity: 0.9;
     color: #C1DBB3;
-    box-shadow: 1px 1px 1px #446930;
+    box-shadow: 1px 1px 1px #6b3009;
 }
